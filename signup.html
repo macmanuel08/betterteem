@@ -6,27 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Betterteem Project</title>
 
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="index.js"></script>
 </head>
 <body>
-    <head>
-        <nav>
-            <ul id="primaryNav" class="hide">
-                <li><a href="index.html">Sign Up</a></li>
-                <li class="active"><a href="signup.html">Sign In</a></li>
-                <li><a href="main.html">Main</a></li>
-                <li><a href="detail.html">Detail</a></li>
-            </ul>
-        </nav>
-    </head>
-    <main>
-        <form action="signin.html" onsubmit="return signup(this);" method="GET">
-            <label>Username* <input id="username" type="type" name="username" required autofocus></label>
-            <label>Email* <input id="email" type="email" name="email" required placeholder="joe@mymail.com" autocomplete="email"></label>
-            <label>Password* <input id="password" type="password" name="password" required autocomplete="current-password"></label>
-            <input type="submit" value="Sign Up" class="btn">
-            <p id="signupstate"></p>
-        </form>
+    <main class="form">
+        <div>
+            <form action="index.html" onsubmit="return signup(this);" method="GET">
+                <label>Username* <input id="username" type="type" name="username" required autofocus></label>
+                <label>Email* <input id="email" type="email" name="email" required placeholder="joe@mymail.com" autocomplete="email"></label>
+                <label>Password* <input id="password" type="password" name="password" required autocomplete="current-password"></label>
+                <input type="submit" value="Sign Up" class="btn">
+                <p id="signupstate"></p>
+            </form>
+        </div>
     </main>
     <footer>
         &copy; Copyright 2021 - John Mark Manuel

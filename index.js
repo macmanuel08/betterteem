@@ -12,7 +12,7 @@ function signup(e) {
 
     let json = JSON.stringify(user);
     localStorage.setItem(username, json);
-    document.querySelector('#signupstate').textContent = "Already Signed Up";
+    document.querySelector('#signupstate').textContent = "Signing Up";
     document.querySelector('#username').value = "";
     document.querySelector('#email').value = "";
     document.querySelector('#password').value = "";

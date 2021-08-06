@@ -37,7 +37,7 @@ fetch(url)
         dayName.setAttribute('class', 'forecastheader');
         dayName.textContent = weekday[forecastToday];
 
-        let temp = document.createElement('span');
+        let temp = document.createElement('p');
         temp.setAttribute('class', 'forecast-temperature');
         temp.textContent = `${forecastList[i].temp.day.toFixed(0)}\xB0C`;
 
@@ -66,7 +66,7 @@ fetch(url)
 
     if (weatherInfo.hasOwnProperty('alerts')) {
 
-      alertcontainer.innerHTML = `Alert(s):<br><br>`;
+      alertcontainer.innerHTML = `<h2>Alert(s):</h2>`;
 
       for (let i = 0; i < weatherInfo.alerts.length; i++) {
         alertcontainer.innerHTML += `${weatherInfo.alerts[i].event}<br>`;

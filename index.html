@@ -6,17 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Betterteem Project</title>
 
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="index.js"></script>
 </head>
 <body>
-    <!-- No header and nav for this page-->
-    <main>
-        <form action="main.html" onsubmit="return signin(this);" method="GET">
-            <label>Username <input id="un" type="type" name="username" autofocus></label>
-            <label>Password <input id="pw" type="password" name="password" autocomplete="current-password"></label>
-            <input type="submit" value="Sign In">
-            <p id="state">Welcome</p>
-        </form>
+    <main class="form">
+        <div>
+            <form action="main.html" onsubmit="return signin(this);" method="GET">
+                <p id="state">Sign In</p>
+                <label>Username <input id="un" type="type" name="username" autofocus required></label>
+                <label>Password <input id="pw" type="password" name="password" autocomplete="current-password" required></label>
+                <input type="submit" value="Sign In" class="btn">
+            </form>
+        </div>
+        <div class="no-account">
+            <p>No Account?</p>
+            <a href="signup.html">Sign Up</a>
+        </div>
     </main>
     <footer>
         &copy; Copyright 2021 - John Mark Manuel

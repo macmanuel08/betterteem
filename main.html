@@ -6,27 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Betterteem Project</title>
 
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="weather.js" defer></script>
 </head>
 <body>
-    <head>
+    <header>
+        <img src="images/jm-logo.svg" alt="Mark Logo">
         <nav>
-            <ul id="primaryNav" class="hide">
-                <li><a href="index.html">Sign Up</a></li>
-                <li><a href="signin.html">Sign In</a></li>
+            <ul>
                 <li class="active"><a href="main.html">Main</a></li>
-                <li><a href="detail.html">Detail</a></li>
+                <li><a href="detail.html">Details</a></li>
+                <li><a href="index.html">Sign Out</a></li>
             </ul>
         </nav>
-    </head>
-    <main>
-      <div class="weather">
-        <p>Temperature: <span class="temperature"></span></p>
-        <p>Condition: <span class="condition"></span></p>
-        <p>Humidity: <span class="humidity"></span></p>
-      </div>
-      <div class="alerts"></div>
-      <div class="forecast"></div>
+    </header>
+    <main class="main">
+        <div class="weather">
+            <h2>Weather Today</h2>
+            <p>Temperature: <span class="temperature"></span></p>
+            <p>Condition: <span class="condition"></span></p>
+            <p>Humidity: <span class="humidity"></span></p>
+        </div>
+        <div class="alerts"></div>
+        <div class="forecast-container">
+            <h2>5-day Weather Forecast</h2>
+            <div class="forecast"></div>
+        </div>
     </main>
     <footer>
         &copy; Copyright 2021 - John Mark Manuel

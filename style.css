@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    background: linear-gradient(120deg, #0084FF, #FFFFFF);
+    background-repeat: no-repeat;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: hsla(0, 0%, 4%, 0.658);
+}
+
+header img {
+    width: 50px;
+}
+
+header nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+header nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 1rem;
+}
+header nav ul li a:hover {color:tomato;}
+header nav ul li.active a {border-bottom: 2px solid #ffffff;}
+
+main {
+    min-height: 100vh;
+}
+
+main.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form p {text-align: center; font-weight: 600;}
+
+label, input {
+    display: block;
+    margin-bottom: .8rem;
+    color: #03254C;
+}
+
+input {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 8px;
+    border: 1px solid #03254C;
+    padding: .5rem;
+}
+
+main.form div {
+    background-color: #FFFFFF;
+    opacity: 0.7;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 350px;
+    margin: 2% auto;
+    padding: 1rem;
+}
+
+div.no-account {
+    text-align: center;
+}
+
+div.no-account p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.btn {
+    max-width: 200px;
+    background-color: #0084FF;
+    color: #FFFFFF;
+    border-radius: 999px;
+    border: 2px solid #0084FF;
+    margin: 10% auto;
+}
+
+.btn:hover {
+    color: #0084FF;
+    background-color: #FFFFFF;
+}
+
+.weather, .alerts {
+    background-color: #FFFFFF;
+    opacity: 0.7;
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+div.forecast {
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 0.7;
+}
+
+div.forecast div {
+    background-color: #FFFFFF;
+    border: 2px solid #333;
+    text-align: center;
+    margin: 1rem;
+    width: 150px;
+}
+
+div.forecast div img {width: 100%;}
+
+.forecast-container h2 {margin: 2rem 1rem 0 1rem;}
+
+main.details div {margin: 1rem;}
+
+footer {
+    text-align: center;
+    padding: .5rem;
+}
+
+@media only screen and (min-width: 426px) {
+    main.main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    div.weather {
+        grid-column: 1/2;
+    }
+
+    div.alerts {
+        grid-column: 2/3;
+    }
+
+    div.forecast-container {
+        grid-column: 1/3;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    main.main {
+        max-width: 70rem;
+        margin: 2% auto;
+    }
+}

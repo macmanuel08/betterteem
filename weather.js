@@ -60,11 +60,11 @@ fetch(url)
 
     /***** Alert Section *****/
 
-    const alert = document.querySelector('.alerts');
-
-    const alertcontainer = document.createElement('div');
-
+  const alert = document.querySelector('.alerts');
+  
     if (weatherInfo.hasOwnProperty('alerts')) {
+
+      const alertcontainer = document.createElement('div');
 
       alertcontainer.innerHTML = `<h2>Alert(s):</h2>`;
 
@@ -74,7 +74,7 @@ fetch(url)
 
       alert.append(alertcontainer);
     } else {
-      alertcontainer.innerHTML = 'No alert for today.';
+      alert.innerHTML = '<h2>No alert for today.</h2>';
     }
 
   });

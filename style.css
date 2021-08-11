@@ -109,6 +109,7 @@ div.forecast {
     display: flex;
     flex-wrap: wrap;
     opacity: 0.7;
+    justify-content: space-evenly;
 }
 
 div.forecast div {
